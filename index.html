@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخزون مبيعات سوبرماركت</title>
+    <link rel="stylesheet" href="working.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">المنتجات</a></li>
+            <li><a href="#">التقارير</a></li>
+            <li><a href="#">الإعدادات</a></li>
+        </ul>
+    </nav>
+
+    <!-- واجهة المستخدم الرئيسية -->
+    <div class="container">
+        <h1>مخزون مبيعات سوبرماركت</h1>
+
+        <!-- إضافة منتج -->
+        <div class="add-product">
+            <h2>إضافة منتج</h2>
+            <form id="addProductForm">
+                <label for="barcode">الباركود:</label>
+                <input type="text" id="barcode" name="barcode" required>
+
+                <label for="productName">اسم المنتج:</label>
+                <input type="text" id="productName" name="productName" required>
+
+                <label for="productPrice">السعر:</label>
+                <input type="number" id="productPrice" name="productPrice" required>
+
+                <label for="productQuantity">الكمية:</label>
+                <input type="number" id="productQuantity" name="productQuantity" required>
+
+                <button type="submit">إضافة المنتج</button>
+            </form>
+        </div>
+
+        <!-- جدول المنتجات -->
+        <div class="product-list">
+            <h2>قائمة المنتجات</h2>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>الباركود</th>
+                        <th>اسم المنتج</th>
+                        <th>السعر</th>
+                        <th>الكمية</th>
+                        <th>الإجمالي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- المنتجات ستضاف هنا باستخدام JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- إجمالي المبيعات -->
+        <div class="sales-summary">
+            <h2>إجمالي المبيعات</h2>
+            <p>إجمالي المبيعات: <span id="totalSales">0</span> ريال</p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
